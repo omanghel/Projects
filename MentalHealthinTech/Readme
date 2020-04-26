@@ -1,0 +1,28 @@
+The project goal was to investigate the effect of the work environment on the mental health of employees from the tech industry.
+The work presented here was done in February-March 2020 as part of the Correlation1: Data Science for Women Summit, in San Francisco 2020 and the results were summarized on a Poster, which will be presented next during the Correlation1 conference in the Summer 2020.
+
+For this project, we used the OSMI public data (years 2019,2018,2017,2016):
+https://osmihelp.org/research
+
+Objective:
+As an objective, we wanted to answer the following question:
+"""How is the productivity affected by the work environment for people with mental health problems ?"""
+by identifying the main factors contributing to lowering/increasing the productivity for people with mental health problems in tech industry.
+We proved in the study that the productivity for the people with mental health is directly related to whether they receive the treatment and support for their condition. Hence, it is important for them to have the support and the tools to ask for a treatment. 
+Following this idea, we wanted to predict how likely is for an employee with mental health issues to look for a treatment while working in a particular tech company environment. 
+
+We defined as the project steps the following:
+1) Defining the objective
+2) Data Cleaning/ Manipulation:
+- map categorical variables to numerical 
+- use discussions to conclude 
+- remove the non -entry or reinterpret it
+We only considered the following cases:
+- keep only US data
+- remove self-employed
+- keep only tech companies 
+3) Train a Machine Learning algorithm to predict if an employee with a MD will seek for treatment.
+4) Build different approaches for unbalanced data. 
+
+Results
+The results are summarized in Analysis+Viz.ipynb
