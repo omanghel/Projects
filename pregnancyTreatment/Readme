@@ -1,0 +1,28 @@
+We consider the following hypothetical scenario:
+
+It is 2050. A next-generation fertility treatment emerged that dramatically improved pregnancy rate in women struggling with infertility. While most patients succeeded in getting pregnant, some failed due to complications of various clinical factors. A study gathered pregnancy outcome and clinic characteristics of around 900 infertility patients who have undergone this treatment. Given a training and testing set, you are tasked with creating a machine learning model to predict how likely a patient would succeed in getting pregnant.
+
+In the training and testing set, each row represents a treatment cycle of a patient. Each patient is assigned a unique patient ID (ID). The outcome of each treatment cycle is recorded under initial_outcome. A patient can have more than one treatment cycle.
+
+There are two types of treatment cycles (Record_Type):
+Primary_Cycle: regular treatment cycle
+Sub_Cycle: a subsidiary treatment cycle that takes place sometimes when the initial phase of the primary cycle failed. Each Sub_Cycle should be considered part of the Primary_Cycle that precede it in cycle date.
+
+Task 1:
+Construct the target column Pregnancy, which equals the initial outcome of the Primary_Cycle if there is no sub cycle after the primary cycle. If there are sub cycles after the primary cycle, Pregnancy should equal the outcome of the most recent sub cycle.
+The end dataset would only have rows with record type “Primary_Cycle”, with a newly added Pregnancy column that contains treatment outcomes that took into account the sub cycles.
+
+Task 2:
+
+After you have wrangled the dataset to the desired state, answer the following questions:
+
+What is the per-cycle pregnancy rate of the training set? In the testing set?
+What is the weighted pregnancy rate per patient in the training set? In the test set?
+Build an ML model to predict which patient would have an ultimate live birth from treatment, using the target column Pregnancy, and other available features.
+What is the AUC of your model?
+Which model metrics other than AUC would you optimize for?
+Assume this fertility treatment is completed in several stages. Some metrics are available as the patient walks in for consultation, but some are available only after she completes certain stages. In real life, the patient’s ultimate chance of success gets updated as she progresses through treatment.
+Identify the most important features in the prediction model and build a strategy on how to make a prediction when some features are missing.
+
+Results:
+The results are summarized in analysisView.ipynb
